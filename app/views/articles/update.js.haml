@@ -1,0 +1,2 @@
+$("li##{@article.id}").replaceWith("#{j render partial: 'article', locals: {article: @article}}");
+- @article = Article.new

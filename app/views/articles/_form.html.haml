@@ -1,0 +1,9 @@
+= form_with model: @article do |f|
+  .form-group
+    = f.text_field :title
+  %br
+  .form-group
+    = f.text_field :body
+  %br
+  .form-group
+    = f.submit
