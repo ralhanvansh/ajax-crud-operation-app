@@ -4,5 +4,5 @@
   %strong body:
   = "#{article.body}"
   %br
-  = link_to 'Delete', article_path(article) , method: 'delete', remote: true
   = link_to 'Edit', edit_article_path(article), remote: true
+  = link_to 'Delete', article_path(article) , method: 'delete', remote: true

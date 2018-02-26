@@ -24,14 +24,14 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
 
-    if @article.update(article_params)
-      respond_to do |format|
+    respond_to do |format|
+      if @article.update(article_params)
         format.html {}
         format.js {}
+      else
+        flash[:alert] = "Something went wrong, Data not updated"
+        render root_path
       end
-    else
-      flash[:alert] = "Something went wrong, Data not updated"
-      render root_path
     end
   end
 
